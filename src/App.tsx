@@ -1,0 +1,11 @@
+import React from 'react';
+import {NavLink, Navigate, Route, Routes} from 'react-router-dom';
+import {Activity, BookOpen, ChartNoAxesCombined, FlaskConical, Github, Info, Menu} from 'lucide-react';
+import ContestPage from './pages/ContestPage';
+import LibraryPage from './pages/LibraryPage';
+import LeaderboardPage from './pages/LeaderboardPage';
+import AboutPage from './pages/AboutPage';
+import DocumentationPage from './pages/DocumentationPage';
+const menu=[['/contest','Contest',FlaskConical],['/library','Library',BookOpen],['/leaderboard','Leaderboard',ChartNoAxesCombined],['/about','About',Info],['/documentation','Documentation',Activity]] as const;
+function Brand(){return <NavLink to='/contest' className='brand'><span className='brand-icon' aria-hidden='true'>🐢</span><span><strong>ICoMF</strong><small>Infinite Contest of Mortality Forecasting</small></span></NavLink>}
+export default function App(){const [open,setOpen]=React.useState(false);return <div className='site'><header className='header'><div className='header-inner'><Brand/><button className='mobile-menu' aria-label='Toggle menu' onClick={()=>setOpen(!open)}><Menu size={22}/></button><nav className={open?'nav nav-open':'nav'} aria-label='Primary navigation'>{menu.map(([url,label,Icon])=><NavLink key={url} to={url} onClick={()=>setOpen(false)} className={({isActive})=>isActive?'nav-link active':'nav-link'}><Icon size={16}/>{label}</NavLink>)}</nav></div></header><main><Routes><Route path='/' element={<Navigate to='/contest' replace/>}/><Route path='/contest' element={<ContestPage/>}/><Route path='/library' element={<LibraryPage/>}/><Route path='/leaderboard' element={<LeaderboardPage/>}/><Route path='/about' element={<AboutPage/>}/><Route path='/documentation' element={<DocumentationPage/>}/><Route path='*' element={<Navigate to='/contest' replace/>}/></Routes></main><footer className='footer'><div className='container footer-inner'><div><strong>ICoMF</strong> · An open-science mortality forecasting initiative <span className='muted'>· Prototype / Demo</span></div><a href='https://github.com/GiacomoLanfiuti/ICoMF' target='_blank' rel='noreferrer'><Github size={16}/> Source on GitHub</a></div></footer></div>}

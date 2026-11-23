@@ -1,0 +1,9 @@
+import {CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
+import {ContestResult, models} from '../data/mockData';
+const palette=['#2765a3','#cc7d35','#3e8e79','#9d63a1','#bd5964','#637da2','#9f9056'];
+export default function ForecastChart({result,age}:{result:ContestResult;age:number}){
+ const target=result.config.target;
+ const factor=target==='mx'?Math.exp((age-result.config.minAge)/24):1;
+ const data=result.points.map(point=>Object.fromEntries(Object.entries(point).map(([k,v])=>[k,k==='year'||v===null?v:typeof v==='number'&&target==='mx'?+(v*factor).toFixed(7):v])));
+ return <div className='chart-area'><ResponsiveContainer width='100%' height={350}><LineChart data={data} margin={{top:8,right:14,bottom:3,left:6}}><CartesianGrid stroke='#e8ecf1' strokeDasharray='3 4'/><XAxis dataKey='year' type='number' domain={['dataMin','dataMax']} tick={{fontSize:12}} tickFormatter={v=>String(v)}/><YAxis width={64} tick={{fontSize:12}} tickFormatter={v=>target==='mx'?Number(v).toFixed(3):Number(v).toFixed(0)}/><Tooltip formatter={(value,name)=>[Number(value).toFixed(target==='mx'?5:2),String(name)]} labelFormatter={v=>`Year: ${v}`}/><Legend verticalAlign='bottom' height={36}/><Line dataKey='historical' name='Observed · training' stroke='#263248' strokeWidth={2.4} dot={false} connectNulls={false} isAnimationActive={false}/><Line dataKey='observed' name='Observed · holdout' stroke='#263248' strokeWidth={2.4} dot={false} strokeDasharray='4 3' isAnimationActive={false}/>{result.config.modelIds.map((id,i)=><Line key={id} dataKey={id} name={models.find(m=>m.id===id)?.name??id} stroke={palette[i%palette.length]} strokeWidth={2} dot={false} strokeDasharray='7 3' connectNulls={false} isAnimationActive={false}/>)}</LineChart></ResponsiveContainer><div className='chart-note'>Synthetic illustration only. No mortality forecasting model has been fitted.</div></div>
+}
