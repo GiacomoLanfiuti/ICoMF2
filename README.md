@@ -1,3 +1,33 @@
+# ICoMF v0.3 — empirical Sweden benchmark integration
+
+This release adds a published empirical fixed-origin Sweden (Total) benchmark to the existing demonstration website. The dashboard and leaderboard fetch precomputed R results from `public/benchmarks/`; **no R code runs on GitHub Pages**.
+
+**Empirical configuration:** training 1960–2000; forecast origin 2000; test 2001–2020; mortality ages 0–104 and 105+; Lee–Carter (1992) and Poisson baseline. Outputs include observed holdout values, forecast values, and RMSE/MAE. Prediction interval values are absent (`NA`). No formal Diebold–Mariano p-value is reported because the 20 target years correspond to different forecast horizons from a single origin.
+
+**Important:** Other countries and arbitrary contest settings in the separate experimental builder are still synthetic, and the site labels them as such. This is not an official global leaderboard. The HMD raw source data are not redistributed in this repository; the attached forecast CSVs are research outputs supplied by the user. Preserve HMD attribution when reusing the figures.
+
+## Add a new benchmark
+
+1. Run the models privately in R and export age-specific and life expectancy forecasts alongside observed holdout values.
+2. Validate `Year`, `Age`, model labels, metric calculation, training and testing metadata and the population being forecast.
+3. Produce a JSON file following `public/benchmarks/sweden_total_1960_2000_h20.json` and add it to `public/benchmarks/index.json`.
+4. Add a UI selector when additional benchmark datasets are available; do not silently relabel one country's results as another's.
+
+## Run locally
+
+```sh
+npm install
+npm test
+npm run build
+npm run dev
+```
+
+## Deploy
+
+The existing GitHub Actions workflow publishes Vite's `dist` to GitHub Pages. In GitHub Settings → Pages, choose GitHub Actions. Vite base must be `/ICoMF2/`.
+
+---
+
 # ICoMF — Infinite Contest of Mortality Forecasting
 
 An interactive **scientific prototype** for exploring mortality forecasting methods. **All displayed data, rankings, and predictions are simulated, not HMD observations or genuine model fits.**

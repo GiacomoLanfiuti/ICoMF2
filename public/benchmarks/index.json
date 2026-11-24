@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "benchmarks": [
+    {
+      "id": "swe-total-1960-2000-h20",
+      "country": "Sweden",
+      "population": "Total",
+      "train": "1960\u20132000",
+      "test": "2001\u20132020",
+      "models": 2,
+      "file": "sweden_total_1960_2000_h20.json"
+    }
+  ]
+}
