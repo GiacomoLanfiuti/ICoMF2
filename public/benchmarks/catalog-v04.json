@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "SWE_Total_1960_2000",
+      "pop": "SWE",
+      "country": "Sweden",
+      "sex": "Total",
+      "trainStart": 1960,
+      "trainEnd": 2000,
+      "horizon": 20,
+      "models": [
+        "Naive",
+        "Poisson",
+        "LeeCarter",
+        "LeeCarterPoisson",
+        "HyndmanUllah"
+      ],
+      "file": "v04/SWE_Total_1960_2000.json"
+    }
+  ]
+}
