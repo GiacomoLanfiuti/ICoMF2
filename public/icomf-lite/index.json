@@ -1,0 +1,905 @@
+{
+  "schema_version": "0.5-lite-v1",
+  "created_at": "2026-11-26T11:15:17+0100",
+  "source": "Human Mortality Database",
+  "life_table": "ax=0.5, 105+ open",
+  "description": "Precomputed e0 point forecasts, available prediction intervals, and retrospective metrics; no age-specific mx",
+  "populations": [
+    {
+      "population": "AUS",
+      "sex": "Female",
+      "file": "icomf-lite/AUS/Female.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "AUS",
+      "sex": "Male",
+      "file": "icomf-lite/AUS/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "AUS",
+      "sex": "Total",
+      "file": "icomf-lite/AUS/Total.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "AUT",
+      "sex": "Female",
+      "file": "icomf-lite/AUT/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "AUT",
+      "sex": "Male",
+      "file": "icomf-lite/AUT/Male.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "AUT",
+      "sex": "Total",
+      "file": "icomf-lite/AUT/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "BEL",
+      "sex": "Female",
+      "file": "icomf-lite/BEL/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "BEL",
+      "sex": "Male",
+      "file": "icomf-lite/BEL/Male.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "BEL",
+      "sex": "Total",
+      "file": "icomf-lite/BEL/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "BGR",
+      "sex": "Female",
+      "file": "icomf-lite/BGR/Female.json",
+      "backtests": 145,
+      "forecasting": 15
+    },
+    {
+      "population": "BGR",
+      "sex": "Male",
+      "file": "icomf-lite/BGR/Male.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "BGR",
+      "sex": "Total",
+      "file": "icomf-lite/BGR/Total.json",
+      "backtests": 135,
+      "forecasting": 15
+    },
+    {
+      "population": "BLR",
+      "sex": "Female",
+      "file": "icomf-lite/BLR/Female.json",
+      "backtests": 85,
+      "forecasting": 9
+    },
+    {
+      "population": "BLR",
+      "sex": "Male",
+      "file": "icomf-lite/BLR/Male.json",
+      "backtests": 90,
+      "forecasting": 9
+    },
+    {
+      "population": "BLR",
+      "sex": "Total",
+      "file": "icomf-lite/BLR/Total.json",
+      "backtests": 89,
+      "forecasting": 9
+    },
+    {
+      "population": "CAN",
+      "sex": "Female",
+      "file": "icomf-lite/CAN/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "CAN",
+      "sex": "Male",
+      "file": "icomf-lite/CAN/Male.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "CAN",
+      "sex": "Total",
+      "file": "icomf-lite/CAN/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "CHE",
+      "sex": "Female",
+      "file": "icomf-lite/CHE/Female.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "CHE",
+      "sex": "Male",
+      "file": "icomf-lite/CHE/Male.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "CHE",
+      "sex": "Total",
+      "file": "icomf-lite/CHE/Total.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "CHL",
+      "sex": "Female",
+      "file": "icomf-lite/CHL/Female.json",
+      "backtests": 10,
+      "forecasting": 5
+    },
+    {
+      "population": "CHL",
+      "sex": "Male",
+      "file": "icomf-lite/CHL/Male.json",
+      "backtests": 10,
+      "forecasting": 5
+    },
+    {
+      "population": "CHL",
+      "sex": "Total",
+      "file": "icomf-lite/CHL/Total.json",
+      "backtests": 10,
+      "forecasting": 5
+    },
+    {
+      "population": "CZE",
+      "sex": "Female",
+      "file": "icomf-lite/CZE/Female.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "CZE",
+      "sex": "Total",
+      "file": "icomf-lite/CZE/Total.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "DEUTE",
+      "sex": "Female",
+      "file": "icomf-lite/DEUTE/Female.json",
+      "backtests": 60,
+      "forecasting": 10
+    },
+    {
+      "population": "DEUTE",
+      "sex": "Male",
+      "file": "icomf-lite/DEUTE/Male.json",
+      "backtests": 30,
+      "forecasting": 10
+    },
+    {
+      "population": "DEUTE",
+      "sex": "Total",
+      "file": "icomf-lite/DEUTE/Total.json",
+      "backtests": 60,
+      "forecasting": 10
+    },
+    {
+      "population": "DEUTNP",
+      "sex": "Female",
+      "file": "icomf-lite/DEUTNP/Female.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "DEUTNP",
+      "sex": "Male",
+      "file": "icomf-lite/DEUTNP/Male.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "DEUTNP",
+      "sex": "Total",
+      "file": "icomf-lite/DEUTNP/Total.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "DEUTW",
+      "sex": "Female",
+      "file": "icomf-lite/DEUTW/Female.json",
+      "backtests": 135,
+      "forecasting": 15
+    },
+    {
+      "population": "DEUTW",
+      "sex": "Male",
+      "file": "icomf-lite/DEUTW/Male.json",
+      "backtests": 95,
+      "forecasting": 10
+    },
+    {
+      "population": "DEUTW",
+      "sex": "Total",
+      "file": "icomf-lite/DEUTW/Total.json",
+      "backtests": 135,
+      "forecasting": 15
+    },
+    {
+      "population": "DNK",
+      "sex": "Female",
+      "file": "icomf-lite/DNK/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "DNK",
+      "sex": "Male",
+      "file": "icomf-lite/DNK/Male.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "DNK",
+      "sex": "Total",
+      "file": "icomf-lite/DNK/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "ESP",
+      "sex": "Female",
+      "file": "icomf-lite/ESP/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "ESP",
+      "sex": "Male",
+      "file": "icomf-lite/ESP/Male.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "ESP",
+      "sex": "Total",
+      "file": "icomf-lite/ESP/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "EST",
+      "sex": "Female",
+      "file": "icomf-lite/EST/Female.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "EST",
+      "sex": "Total",
+      "file": "icomf-lite/EST/Total.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "FIN",
+      "sex": "Female",
+      "file": "icomf-lite/FIN/Female.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "FIN",
+      "sex": "Male",
+      "file": "icomf-lite/FIN/Male.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "FIN",
+      "sex": "Total",
+      "file": "icomf-lite/FIN/Total.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "FRACNP",
+      "sex": "Female",
+      "file": "icomf-lite/FRACNP/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "FRACNP",
+      "sex": "Male",
+      "file": "icomf-lite/FRACNP/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "FRACNP",
+      "sex": "Total",
+      "file": "icomf-lite/FRACNP/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "FRATNP",
+      "sex": "Female",
+      "file": "icomf-lite/FRATNP/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "FRATNP",
+      "sex": "Male",
+      "file": "icomf-lite/FRATNP/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "FRATNP",
+      "sex": "Total",
+      "file": "icomf-lite/FRATNP/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBR_NIR",
+      "sex": "Female",
+      "file": "icomf-lite/GBR_NIR/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBR_NIR",
+      "sex": "Total",
+      "file": "icomf-lite/GBR_NIR/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBR_NP",
+      "sex": "Female",
+      "file": "icomf-lite/GBR_NP/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBR_NP",
+      "sex": "Male",
+      "file": "icomf-lite/GBR_NP/Male.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "GBR_NP",
+      "sex": "Total",
+      "file": "icomf-lite/GBR_NP/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBR_SCO",
+      "sex": "Female",
+      "file": "icomf-lite/GBR_SCO/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBR_SCO",
+      "sex": "Male",
+      "file": "icomf-lite/GBR_SCO/Male.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "GBR_SCO",
+      "sex": "Total",
+      "file": "icomf-lite/GBR_SCO/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBRCENW",
+      "sex": "Female",
+      "file": "icomf-lite/GBRCENW/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBRCENW",
+      "sex": "Male",
+      "file": "icomf-lite/GBRCENW/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBRCENW",
+      "sex": "Total",
+      "file": "icomf-lite/GBRCENW/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBRTENW",
+      "sex": "Female",
+      "file": "icomf-lite/GBRTENW/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GBRTENW",
+      "sex": "Male",
+      "file": "icomf-lite/GBRTENW/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "GBRTENW",
+      "sex": "Total",
+      "file": "icomf-lite/GBRTENW/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "GRC",
+      "sex": "Female",
+      "file": "icomf-lite/GRC/Female.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "GRC",
+      "sex": "Male",
+      "file": "icomf-lite/GRC/Male.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "GRC",
+      "sex": "Total",
+      "file": "icomf-lite/GRC/Total.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "HKG",
+      "sex": "Female",
+      "file": "icomf-lite/HKG/Female.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "HKG",
+      "sex": "Male",
+      "file": "icomf-lite/HKG/Male.json",
+      "backtests": 0,
+      "forecasting": 5
+    },
+    {
+      "population": "HKG",
+      "sex": "Total",
+      "file": "icomf-lite/HKG/Total.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "HRV",
+      "sex": "Total",
+      "file": "icomf-lite/HRV/Total.json",
+      "backtests": 5,
+      "forecasting": 0
+    },
+    {
+      "population": "HUN",
+      "sex": "Female",
+      "file": "icomf-lite/HUN/Female.json",
+      "backtests": 30,
+      "forecasting": 10
+    },
+    {
+      "population": "HUN",
+      "sex": "Male",
+      "file": "icomf-lite/HUN/Male.json",
+      "backtests": 10,
+      "forecasting": 5
+    },
+    {
+      "population": "HUN",
+      "sex": "Total",
+      "file": "icomf-lite/HUN/Total.json",
+      "backtests": 30,
+      "forecasting": 10
+    },
+    {
+      "population": "IRL",
+      "sex": "Female",
+      "file": "icomf-lite/IRL/Female.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "IRL",
+      "sex": "Total",
+      "file": "icomf-lite/IRL/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "ISL",
+      "sex": "Female",
+      "file": "icomf-lite/ISL/Female.json",
+      "backtests": 4,
+      "forecasting": 3
+    },
+    {
+      "population": "ISL",
+      "sex": "Total",
+      "file": "icomf-lite/ISL/Total.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "ISR",
+      "sex": "Female",
+      "file": "icomf-lite/ISR/Female.json",
+      "backtests": 20,
+      "forecasting": 0
+    },
+    {
+      "population": "ISR",
+      "sex": "Male",
+      "file": "icomf-lite/ISR/Male.json",
+      "backtests": 20,
+      "forecasting": 0
+    },
+    {
+      "population": "ISR",
+      "sex": "Total",
+      "file": "icomf-lite/ISR/Total.json",
+      "backtests": 20,
+      "forecasting": 0
+    },
+    {
+      "population": "ITA",
+      "sex": "Female",
+      "file": "icomf-lite/ITA/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "ITA",
+      "sex": "Male",
+      "file": "icomf-lite/ITA/Male.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "ITA",
+      "sex": "Total",
+      "file": "icomf-lite/ITA/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "JPN",
+      "sex": "Female",
+      "file": "icomf-lite/JPN/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "JPN",
+      "sex": "Male",
+      "file": "icomf-lite/JPN/Male.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "JPN",
+      "sex": "Total",
+      "file": "icomf-lite/JPN/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "LTU",
+      "sex": "Female",
+      "file": "icomf-lite/LTU/Female.json",
+      "backtests": 113,
+      "forecasting": 14
+    },
+    {
+      "population": "LTU",
+      "sex": "Total",
+      "file": "icomf-lite/LTU/Total.json",
+      "backtests": 106,
+      "forecasting": 15
+    },
+    {
+      "population": "LVA",
+      "sex": "Female",
+      "file": "icomf-lite/LVA/Female.json",
+      "backtests": 77,
+      "forecasting": 10
+    },
+    {
+      "population": "LVA",
+      "sex": "Total",
+      "file": "icomf-lite/LVA/Total.json",
+      "backtests": 79,
+      "forecasting": 10
+    },
+    {
+      "population": "NLD",
+      "sex": "Female",
+      "file": "icomf-lite/NLD/Female.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "NLD",
+      "sex": "Male",
+      "file": "icomf-lite/NLD/Male.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "NLD",
+      "sex": "Total",
+      "file": "icomf-lite/NLD/Total.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "NOR",
+      "sex": "Female",
+      "file": "icomf-lite/NOR/Female.json",
+      "backtests": 114,
+      "forecasting": 15
+    },
+    {
+      "population": "NOR",
+      "sex": "Male",
+      "file": "icomf-lite/NOR/Male.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "NOR",
+      "sex": "Total",
+      "file": "icomf-lite/NOR/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "NZL_NM",
+      "sex": "Female",
+      "file": "icomf-lite/NZL_NM/Female.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "NZL_NM",
+      "sex": "Total",
+      "file": "icomf-lite/NZL_NM/Total.json",
+      "backtests": 30,
+      "forecasting": 5
+    },
+    {
+      "population": "NZL_NP",
+      "sex": "Female",
+      "file": "icomf-lite/NZL_NP/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "NZL_NP",
+      "sex": "Total",
+      "file": "icomf-lite/NZL_NP/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "POL",
+      "sex": "Female",
+      "file": "icomf-lite/POL/Female.json",
+      "backtests": 85,
+      "forecasting": 15
+    },
+    {
+      "population": "POL",
+      "sex": "Male",
+      "file": "icomf-lite/POL/Male.json",
+      "backtests": 77,
+      "forecasting": 10
+    },
+    {
+      "population": "POL",
+      "sex": "Total",
+      "file": "icomf-lite/POL/Total.json",
+      "backtests": 83,
+      "forecasting": 15
+    },
+    {
+      "population": "PRT",
+      "sex": "Female",
+      "file": "icomf-lite/PRT/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "PRT",
+      "sex": "Male",
+      "file": "icomf-lite/PRT/Male.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "PRT",
+      "sex": "Total",
+      "file": "icomf-lite/PRT/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "RUS",
+      "sex": "Female",
+      "file": "icomf-lite/RUS/Female.json",
+      "backtests": 71,
+      "forecasting": 8
+    },
+    {
+      "population": "RUS",
+      "sex": "Male",
+      "file": "icomf-lite/RUS/Male.json",
+      "backtests": 75,
+      "forecasting": 10
+    },
+    {
+      "population": "RUS",
+      "sex": "Total",
+      "file": "icomf-lite/RUS/Total.json",
+      "backtests": 74,
+      "forecasting": 10
+    },
+    {
+      "population": "SVK",
+      "sex": "Female",
+      "file": "icomf-lite/SVK/Female.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "SVK",
+      "sex": "Total",
+      "file": "icomf-lite/SVK/Total.json",
+      "backtests": 5,
+      "forecasting": 5
+    },
+    {
+      "population": "SVN",
+      "sex": "Female",
+      "file": "icomf-lite/SVN/Female.json",
+      "backtests": 0,
+      "forecasting": 5
+    },
+    {
+      "population": "SVN",
+      "sex": "Total",
+      "file": "icomf-lite/SVN/Total.json",
+      "backtests": 0,
+      "forecasting": 5
+    },
+    {
+      "population": "SWE",
+      "sex": "Female",
+      "file": "icomf-lite/SWE/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "SWE",
+      "sex": "Male",
+      "file": "icomf-lite/SWE/Male.json",
+      "backtests": 20,
+      "forecasting": 5
+    },
+    {
+      "population": "SWE",
+      "sex": "Total",
+      "file": "icomf-lite/SWE/Total.json",
+      "backtests": 115,
+      "forecasting": 15
+    },
+    {
+      "population": "TWN",
+      "sex": "Female",
+      "file": "icomf-lite/TWN/Female.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "TWN",
+      "sex": "Male",
+      "file": "icomf-lite/TWN/Male.json",
+      "backtests": 45,
+      "forecasting": 10
+    },
+    {
+      "population": "TWN",
+      "sex": "Total",
+      "file": "icomf-lite/TWN/Total.json",
+      "backtests": 80,
+      "forecasting": 10
+    },
+    {
+      "population": "UKR",
+      "sex": "Female",
+      "file": "icomf-lite/UKR/Female.json",
+      "backtests": 70,
+      "forecasting": 8
+    },
+    {
+      "population": "UKR",
+      "sex": "Male",
+      "file": "icomf-lite/UKR/Male.json",
+      "backtests": 75,
+      "forecasting": 10
+    },
+    {
+      "population": "UKR",
+      "sex": "Total",
+      "file": "icomf-lite/UKR/Total.json",
+      "backtests": 75,
+      "forecasting": 10
+    },
+    {
+      "population": "USA",
+      "sex": "Female",
+      "file": "icomf-lite/USA/Female.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "USA",
+      "sex": "Male",
+      "file": "icomf-lite/USA/Male.json",
+      "backtests": 150,
+      "forecasting": 15
+    },
+    {
+      "population": "USA",
+      "sex": "Total",
+      "file": "icomf-lite/USA/Total.json",
+      "backtests": 150,
+      "forecasting": 15
+    }
+  ]
+}
