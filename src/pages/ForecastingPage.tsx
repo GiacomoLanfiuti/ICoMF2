@@ -13,7 +13,17 @@ export default function ForecastingPage(){
  const models=uniqueSorted(runs.map(r=>r.model));
  useEffect(()=>{setChosen(models.includes('LeeCarterPoisson')?['LeeCarterPoisson']:models.slice(0,1))},[pop,start]);
  const end=Math.max(0,...runs.map(r=>r.forecast_end));
- useEffect(()=>{if(end)setUntil(prev=>Math.max(runs[0]?.training_end+1??2026,Math.min(prev,end)))},[end,pop,start]);
+
+useEffect(() => {
+  if (end) {
+    setUntil(prev =>
+      Math.max(
+        (runs[0]?.training_end ?? 2025) + 1,
+        Math.min(prev, end)
+      )
+    );
+  }
+}, [end, pop, start]);
  const selected=runs.filter(r=>chosen.includes(r.model));
  const first=selected[0]?.training_end??runs[0]?.training_end??2025;
  const intervalModels=selected.filter(r=>r.e0.some(x=>x.L95!==null&&x.U95!==null));
